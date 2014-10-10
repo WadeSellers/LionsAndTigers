@@ -7,16 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+
 @protocol TopDelegate
 
-- (void) topRevealButtonTapped;
-//-(IBAction)topRevealButtonTapped:(id)sender;
+- (void) onTopButtonTapped:(id)sender;
 
 @end
 
-@interface TopViewController : UIViewController
 
 
+@interface TopViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+
+@property id<TopDelegate> delegate;
 
 
 @end
+

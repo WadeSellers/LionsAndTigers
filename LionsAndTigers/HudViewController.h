@@ -9,13 +9,14 @@
 #import <UIKit/UIKit.h>
 @protocol HUDDelegate
 
+- (void) showLionsOrTigers;
 @end
 
 @interface HudViewController : UIViewController
 
--(void)tigersButtonTapped;
+- (IBAction)lionsButtonTapped:(id)sender;
+- (IBAction)tigersButtonTapped:(id)sender;
 
--(void)lionsButtonTapped;
-
+@property id<HUDDelegate> delegate;
 
 @end

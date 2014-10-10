@@ -7,25 +7,31 @@
 //
 
 #import "TopViewController.h"
+#import "HudViewController.h"
 
-@interface TopViewController ()
+
+@interface TopViewController () <HUDDelegate>
 
 @end
 
 @implementation TopViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-
-}
+//- (void)viewDidLoad {
+//    [super viewDidLoad];
+//
+//
+//}
 
 -(IBAction)topRevealButtonTapped:(id)sender
 {
-    
+    [self.delegate onTopButtonTapped:self];
+    NSLog(@"test");
 }
 
-
+- (void)showLionsOrTigers:(id)sender
+{
+    
+}
 
 
 

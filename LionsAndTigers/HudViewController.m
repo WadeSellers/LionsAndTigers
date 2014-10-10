@@ -7,6 +7,7 @@
 //
 
 #import "HudViewController.h"
+#import "TopViewController.h"
 
 @interface HudViewController ()
 
@@ -20,10 +21,16 @@
 
 }
 
-- (IBAction)lionsButtonTapped:(id)sender {
+- (IBAction)lionsButtonTapped:(id)sender
+{
+    [self.delegate showLionsOrTigers];
+    NSLog(@"Lions Button");
 }
 
-- (IBAction)tigersButtonTapped:(id)sender {
+- (IBAction)tigersButtonTapped:(id)sender
+{
+    [self.delegate showLionsOrTigers];
+    NSLog(@"Tigers Button");
 }
 
 
